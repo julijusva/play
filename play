@@ -1,0 +1,28 @@
+game = [['x','o',3],
+        ['x','x',6],
+        [7,8,'x']]
+
+# row check
+for i in range(3):
+    if len(set(game[i])) == 1:
+        if game[i][0] == 'x':
+            print 'x wins'
+        if game[i][1] == 'o':
+            print 'o wins'
+
+# column check
+for i in range(3):
+    if game[0][i] == game[1][i] == game[2][i]:
+        if game[1][i] == 'x':
+            print 'x wins'
+        if game[1][i] == 'o':
+            print 'o wins'
+
+# diagonal check
+for i in range(3):
+    if game[0][0] == game[1][1] == game[2][2] or game[0][2] == game[1][1] == game[2][0]:
+        if game[1][1] == 'x':
+            print 'x wins'
+        if game[1][1] == 'o':
+            print 'o wins'
+
